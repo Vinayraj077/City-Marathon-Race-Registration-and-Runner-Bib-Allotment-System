@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact the City Marathon organisers.">
+  <meta property="og:title" content="Contact | City Marathon">
+  <meta property="og:description" content="Questions about registration or your bib? Contact the City Marathon committee.">
+  <meta property="og:type" content="website">
+  <title>Contact | City Marathon</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111827'/%3E%3Ctext x='32' y='43' font-size='32' font-weight='800' text-anchor='middle' fill='%23ea580c' font-family='Arial'%3ECM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip">Skip to content</a>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">CITY<span>MARATHON</span></a>
+      <input type="checkbox" id="menu" class="menu-toggle">
+      <label for="menu" class="menu-button" aria-label="Open menu">&#9776;</label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="bib-allotment.html">Bib Allotment</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        <li><a href="register.html" class="cta">Register</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-title">
+      <h1>Contact Us</h1>
+      <p>Questions about registration or your bib? Write to us.</p>
+    </div>
+
+    <section>
+      <div class="container two-col">
+        <div>
+          <h3>MARATHON COMMITTEE</h3>
+          <p><br>Lovely Professional University, Main Road<br>Phagwara, Punjab &ndash; 144411</p>
+          <br>
+          <p><strong>Email:</strong><br>
+             <a href="mailto:vinayrajpiyush@gmail.com">vinayrajpiyush@gmail.com</a><br>
+             <a href="mailto:divyansh@gmail.com">divyansh@gmail.com</a></p>
+          <br>
+          <p><strong>Phone:</strong> <a href="tel:+917250917123">+91 7250917123</a><br>
+             <strong>Helpdesk hours:</strong> 10 AM &ndash; 6 PM, Mon&ndash;Sat</p>
+        </div>
+
+        <!-- Opens the visitor's email app addressed to the organisers. -->
+        <form action="mailto:vinayrajpiyush@gmail.com" method="post" enctype="text/plain" style="max-width:none;">
+          <div class="grid">
+            <div class="full">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="Name" autocomplete="name" required>
+            </div>
+            <div class="full">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="Email" autocomplete="email" required>
+            </div>
+            <div class="full">
+              <label for="message">Message</label>
+              <textarea id="message" name="Message" required></textarea>
+              <p class="hint">This opens your email app with the message ready to send.</p>
+            </div>
+            <div class="full">
+              <button type="submit" class="btn primary">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>City Marathon</strong> &mdash; Race Registration and Runner Bib Allotment System</p>
+    <p><a href="faq.html">FAQ</a> &middot; <a href="privacy.html">Privacy &amp; Terms</a></p>
+    <p>&copy; 2026. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

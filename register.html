@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register for the City Marathon.">
+  <meta property="og:title" content="Register | City Marathon">
+  <meta property="og:description" content="Reserve your place in the City Marathon, 14 January 2027.">
+  <meta property="og:type" content="website">
+  <title>Register | City Marathon</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111827'/%3E%3Ctext x='32' y='43' font-size='32' font-weight='800' text-anchor='middle' fill='%23ea580c' font-family='Arial'%3ECM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip">Skip to content</a>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">CITY<span>MARATHON</span></a>
+      <input type="checkbox" id="menu" class="menu-toggle">
+      <label for="menu" class="menu-button" aria-label="Open menu">&#9776;</label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="bib-allotment.html">Bib Allotment</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="register.html" class="cta active" aria-current="page">Register</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-title">
+      <h1>Runner Registration</h1>
+      <p>Fill in the form to reserve your place</p>
+    </div>
+
+    <section>
+      <div class="container">
+
+        <!-- HTML/CSS-only project, so there is no server to receive the form.
+             Fields have no "name" attribute on purpose: with method="get" the
+             browser would otherwise put the ID number, phone, blood group and
+             medical notes in the address bar. The form just shows the success page.
+             To email the details instead, change the form tag to:
+             <form action="mailto:you@example.com" method="post" enctype="text/plain">
+             and add a name="..." to every field you want included. -->
+        <form id="regForm" action="register-success.html" method="get">
+
+          <fieldset>
+            <legend>Personal Details</legend>
+            <div class="grid">
+              <div class="full">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" autocomplete="name" maxlength="80" required>
+              </div>
+              <div>
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" autocomplete="bday" max="2017-01-14" required>
+                <p class="hint">Minimum age is 10 on race day.</p>
+              </div>
+              <div>
+                <label for="gender">Gender</label>
+                <select id="gender" required>
+                  <option value="">Select</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" autocomplete="email" maxlength="100" required>
+              </div>
+              <div>
+                <label for="phone">Mobile Number</label>
+                <input type="tel" id="phone" inputmode="numeric" autocomplete="tel-national" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit number" required>
+              </div>
+              <div>
+                <label for="city">City</label>
+                <input type="text" id="city" autocomplete="address-level2" maxlength="60" required>
+              </div>
+              <div>
+                <label for="idproof">Photo ID Number (Aadhaar / Licence / Passport)</label>
+                <input type="text" id="idproof" autocomplete="off" maxlength="20" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Race Details</legend>
+            <div class="grid">
+              <div>
+                <label for="category">Race Category</label>
+                <select id="category" required>
+                  <option value="">Select a category</option>
+                  <option>Full Marathon (42.195 km) - Rs 1500 - age 18+</option>
+                  <option>Half Marathon (21.1 km) - Rs 1000 - age 18+</option>
+                  <option>10K Run - Rs 700 - age 14+</option>
+                  <option>5K Fun Run - Rs 400 - age 10+</option>
+                </select>
+              </div>
+              <div>
+                <label for="shirt">T-Shirt Size</label>
+                <select id="shirt" required>
+                  <option value="">Select</option>
+                  <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+                </select>
+              </div>
+              <div class="full">
+                <label for="besttime">Previous Best Finish Time (optional)</label>
+                <input type="text" id="besttime" maxlength="10" placeholder="e.g. 4:15:00 for a marathon">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Emergency &amp; Medical</legend>
+            <div class="grid">
+              <div>
+                <label for="ecname">Emergency Contact Name</label>
+                <input type="text" id="ecname" autocomplete="off" maxlength="80" required>
+              </div>
+              <div>
+                <label for="ecphone">Emergency Contact Number</label>
+                <input type="tel" id="ecphone" inputmode="numeric" autocomplete="off" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit number" required>
+              </div>
+              <div>
+                <label for="blood">Blood Group</label>
+                <select id="blood" required>
+                  <option value="">Select</option>
+                  <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+                  <option>AB+</option><option>AB-</option><option>O+</option><option>O-</option>
+                </select>
+              </div>
+              <div>
+                <label for="medical">Medical Conditions / Allergies</label>
+                <input type="text" id="medical" maxlength="200" placeholder="Write 'None' if not applicable">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Declaration</legend>
+            <label class="check" for="guardian">
+              <input type="checkbox" id="guardian">
+              I am under 18 and my parent or guardian has given consent for me to run (tick only if this applies).
+            </label>
+            <label class="check" for="declaration">
+              <input type="checkbox" id="declaration" required>
+              I confirm that the details above are correct, I am medically fit to run, and I accept the race rules and the <a href="privacy.html">Privacy &amp; Terms</a>.
+            </label>
+          </fieldset>
+
+          <p style="text-align:center;">
+            <button type="submit" class="btn primary">Submit Registration</button>
+            &nbsp;
+            <button type="reset" class="btn secondary">Clear Form</button>
+          </p>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>City Marathon</strong> &mdash; Race Registration and Runner Bib Allotment System</p>
+    <p><a href="faq.html">FAQ</a> &middot; <a href="privacy.html">Privacy &amp; Terms</a></p>
+    <p>&copy; 2026. All rights reserved.</p>
+  </footer>
+</body>
+</html>
